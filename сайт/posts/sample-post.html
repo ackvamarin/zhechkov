@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Первый пост — Как я начал учить программирование</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="/">Программирование</a></h1>
+      <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="/posts/sample-post.html">Блог</a>
+        <a href="/">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <h2>Как я начал учить программирование</h2>
+      <p>Небольшая заметка-история и пример кода.</p>
+
+      <h3>Мини-руководство: простой сервер на Node.js</h3>
+      <p>Пример показывает минимальный HTTP-сервер (если у вас установлен Node.js):</p>
+
+      <pre><code class="language-javascript">// server.js
+const http = require('http');
+const port = 3000;
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello from simple Node server');
+}).listen(port, () => console.log(`Server running on http://localhost:${port}`));
+</code></pre>
+
+      <p>Скопируйте код в `server.js` и запустите `node server.js`.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 — Сайт про программирование<br>Site made by Zhechkov — <a href="mailto:zhechkovvanya71@gmail.com">zhechkovvanya71@gmail.com</a></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

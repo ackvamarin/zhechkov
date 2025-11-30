@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Программирование — сайт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="/">Программирование</a></h1>
+      <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="posts/post.html?src=sample-post.md">Блог</a>
+        <a href="#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <div class="content">
+      <section class="hero hero-with-image">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/images/hacker.svg" alt="Hacker illustration" />
+        </div>
+        <div class="hero-text">
+          <h2>Learn, build and explore the world of code</h2>
+          <p>Articles, examples and mini-projects about programming. Start small — learn big.</p>
+          <p><a class="btn" href="posts/index.html">Read articles</a></p>
+        </div>
+      </section>
+
+      <section class="example">
+        <h3>Пример: функция на JavaScript</h3>
+        <pre><code class="language-javascript">// Функция суммирует элементы массива
+function sum(arr) {
+  return arr.reduce((a, b) => a + b, 0);
+}
+
+console.log(sum([1,2,3,4])); // 10</code></pre>
+      </section>
+
+      <section id="about" class="about">
+        <h3>О проекте</h3>
+        <p>Мини-сайт для заметок о программировании. Мы будем добавлять статьи, примеры кода и интерактивные демо по мере развития проекта.</p>
+      </section>
+    </div>
+
+    <aside class="sidebar">
+      <h3>Статьи</h3>
+      <ul class="post-list">
+        <li><a href="post.html?src=sample-post.md">Первый пост — Как я начал учить программирование</a></li>
+        <li><a href="post.html?src=hackers.md">Культура хакеров</a></li>
+        <li><a href="index.html">Главная</a></li>
+      </ul>
+      <hr />
+      <h4>Быстрые ссылки</h4>
+      <ul>
+        <li><a href="posts/index.html">Все статьи</a></li>
+        <li><a href="#about">О проекте</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 — Сайт про программирование<br>Site made by Zhechkov — <a href="mailto:zhechkovvanya71@gmail.com">zhechkovvanya71@gmail.com</a></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

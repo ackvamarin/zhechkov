@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="800" height="800" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a9"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="none"/>
+  <!-- Hoodie -->
+  <path d="M300 130c-90 0-160 60-160 160v40c0 40 40 80 160 80s160-40 160-80v-40c0-100-70-160-160-160z" fill="#0b1220"/>
+  <!-- Mask -->
+  <path d="M220 260c0-30 40-50 80-50s80 20 80 50v30c0 30-40 50-80 50s-80-20-80-50v-30z" fill="#fff" opacity="0.95"/>
+  <!-- Eye slits -->
+  <rect x="245" y="255" width="50" height="12" rx="6" fill="#0b1220" opacity="0.95"/>
+  <rect x="305" y="255" width="50" height="12" rx="6" fill="#0b1220" opacity="0.95"/>
+  <!-- Shadow under hood -->
+  <ellipse cx="300" cy="360" rx="120" ry="18" fill="#000" opacity="0.15"/>
+  <!-- Outline stroke with gradient -->
+  <path d="M300 130c-90 0-160 60-160 160v40c0 40 40 80 160 80s160-40 160-80v-40c0-100-70-160-160-160z" fill="none" stroke="url(#g)" stroke-width="6" stroke-linejoin="round"/>
+</svg>

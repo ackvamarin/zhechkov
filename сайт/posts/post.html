@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Пост — Программирование</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="/">Программирование</a></h1>
+      <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="index.html">Сайт</a>
+        <a href="index.html">Блог</a>
+        <a href="index.html#about">О проекте</a>
+        <a href="index.html">В начало</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article id="post-content">
+      <p>Загрузка...</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 — Сайт про программирование<br>Site made by Zhechkov — <a href="mailto:zhechkovvanya71@gmail.com">zhechkovvanya71@gmail.com</a></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.1.1/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    (function(){
+      function getQueryParam(name) {
+        const params = new URLSearchParams(location.search);
+        return params.get(name);
+      }
+      const src = getQueryParam('src');
+      const container = document.getElementById('post-content');
+      if (!src) {
+        container.innerHTML = '<p>Не указан файл статьи (параметр <code>src</code>).</p>';
+        return;
+      }
+      const safePath = src.replace(/[^a-zA-Z0-9._-]/g, '');
+      fetch(safePath)
+        .then(res => {
+          if (!res.ok) throw new Error('Не удалось загрузить статью');
+          return res.text();
+        })
+        .then(md => {
+          // render markdown
+          const html = marked.parse(md);
+          container.innerHTML = html;
+          // highlight code
+          if (window.hljs) hljs.highlightAll();
+          // add copy buttons from main.js helper
+          try { if (window.refreshCodeHelpers) window.refreshCodeHelpers(); } catch(e){}
+        })
+        .catch(err => {
+          container.innerHTML = '<p>Ошибка загрузки статьи: ' + err.message + '</p>';
+        });
+    })();
+  </script>
+</body>
+</html>
